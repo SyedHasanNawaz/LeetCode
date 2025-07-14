@@ -14,26 +14,12 @@ public:
 
         for (int i = 0; i < n; i++)
         {
-            if (nums[i] == val)
+            if (nums[i] != val)
             {
-                continue;
-            }
-            else
-            {
-                counter++;
+                nums[counter++] = nums[i];
             }
         }
 
-        return counter = counter - 1;
+        return counter;
     }
 };
-
-int main()
-{
-    vector<int> nums = {3, 2, 2, 3};
-    int val = 3;
-    Solution sol;
-    int result = sol.removeElement(nums, val);
-    cout << "Length without value " << val << ": " << result << endl;
-    return 0;
-}
