@@ -32,7 +32,7 @@ public:
         c++;
         maxDepth(root->left);
         maxDepth(root->right);
-        c--; // backtrack
+        c--;
 
         return result;
     }
